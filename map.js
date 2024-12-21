@@ -15,17 +15,30 @@ const getLengthOf = function (word) {
 
 // lengths of ["apple", "banana", "kiwi"] => [5, 6, 4]
 const lengthsOf = function (strings) {
-  return strings.map(getLengthOf)
+  return strings.map(getLengthOf);
 };
 
 // ----------------------------------------------------------------------
 
+const toUpper = function (word) {
+  return word.toUpperCase();
+};
 
 // uppercase of ["hello", "world"] => ["HELLO", "WORLD"]
-const uppercaseOf = function (strings) { };
+const uppercaseOf = function (strings) {
+  return strings.map(toUpper);
+};
+
+// ----------------------------------------------------------------------
+
+const firstCharOf = function (word) {
+  return word[0];
+};
 
 // first characters of ["apple", "banana", "kiwi"] => ["a", "b", "k"]
-const firstCharactersOf = function (strings) { };
+const firstCharactersOf = function (strings) {
+  return strings.map(firstCharOf);
+};
 
 // truth values of [0, 1, 2, 3] => [false, true, true, true]
 // Assume non-zero numbers are true, and zero is false
@@ -403,4 +416,15 @@ const getEventAttendees = function (events) { };
 // console.log(lengthsOf(["applebananakiwi"]));
 // console.log(lengthsOf([]));
 
+// console.log(uppercaseOf(["apple", "banana", "kiwi"]));
+// console.log(uppercaseOf(["apple", "kiwi"]));
+// console.log(uppercaseOf(["apple", "ba", "kiwi"]));
+// console.log(uppercaseOf(["applebananakiwi"]));
+// console.log(uppercaseOf(["HELLO"]));
+
+console.log(firstCharactersOf(["apple", "banana", "kiwi"]));
+console.log(firstCharactersOf(["apple", "kiwi"]));
+console.log(firstCharactersOf(["apple", "ba", "kiwi"]));
+console.log(firstCharactersOf(["applebananakiwi"]));
+console.log(firstCharactersOf(["HELLO"]));
 
