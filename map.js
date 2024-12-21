@@ -65,12 +65,30 @@ const reversedStringsOf = function (strings) {
 
 // ----------------------------------------------------------------------
 
+const getDoubleLetter = function (letter) {
+  return letter.repeat(2);
+};
+
+const getDoubleLetterWord = function (word) {
+  return word.split("").map(getDoubleLetter);
+};
+
 // double letters of ["cat", "dog", "bat"] => ["ccaat", "ddoog", "bbaatt"]
-const doubleLettersOf = function (strings) { };
+const doubleLettersOf = function (strings) {
+  return strings.map(getDoubleLetterWord);
+};
+
 // ----------------------------------------------------------------------
 
+const complementOf = function (boolean) {
+  return !boolean;
+};
+
 // boolean negation of [true, false, true] => [false, true, false]
-const negatedBooleansOf = function (booleans) { };
+const negatedBooleansOf = function (booleans) {
+  return booleans.map(complementOf);
+};
+
 // ----------------------------------------------------------------------
 
 // character codes of ["a", "b", "c"] => [97, 98, 99]
@@ -544,8 +562,17 @@ const getEventAttendees = function (events) { };
 // console.log(truthValuesOf([-1, 0, 1]));
 // console.log(truthValuesOf([0]));
 
-console.log(reversedStringsOf(["apple", "banana", "kiwi"]));
-console.log(reversedStringsOf(["apple", "kiwi"]));
-console.log(reversedStringsOf(["apple", "ba", "kiwi"]));
-console.log(reversedStringsOf(["applebananakiwi"]));
-console.log(reversedStringsOf(["HELLO"]));
+// console.log(reversedStringsOf(["apple", "banana", "kiwi"]));
+// console.log(reversedStringsOf(["apple", "kiwi"]));
+// console.log(reversedStringsOf(["apple", "ba", "kiwi"]));
+// console.log(reversedStringsOf(["applebananakiwi"]));
+// console.log(reversedStringsOf(["HELLO"]));
+
+console.log(doubleLettersOf(["cat", "dog", "bat"]));
+console.log(doubleLettersOf(["cat", "dog"]));
+console.log(doubleLettersOf(["karthikeya"]));
+
+console.log(negatedBooleansOf([true, false, true, false, true, false]));
+console.log(negatedBooleansOf([true, false, true]));
+console.log(negatedBooleansOf([false, true, false]));
+
