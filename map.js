@@ -149,12 +149,34 @@ const repeatedStringsOf = function (strings) {
 
 // ----------------------------------------------------------------------
 
+const reverseTheArray = function (array) {
+  return array.reverse();
+};
+
 // reverse arrays of [[1, 2, 3], [4, 5, 6]] => [[3, 2, 1], [6, 5, 4]]
-const reversedArraysOf = function (arrays) { };
+const reversedArraysOf = function (arrays) {
+  return arrays.map(reverseTheArray);
+};
+
 // ----------------------------------------------------------------------
 
 // remove vowels from ["apple", "banana", "grape"] => ["ppl", "bnn", "grp"]
-const withoutVowelsOf = function (strings) { };
+
+const isVowel = function (char) {
+  const vowels = 'aeiou'.split('');
+  return !vowels.includes(char);
+};
+
+const removeVowels = function (string) {
+  return string.split('').filter(isVowel).join('');
+};
+
+const withoutVowelsOf = function (strings) {
+  return strings.map(removeVowels);
+};
+
+console.log(withoutVowelsOf(["apple", "banana", "grape"]));
+
 // ----------------------------------------------------------------------
 
 // cumulative sums of [[1, 2, 3], [4, 5, 6]] => [[1, 3, 6], [4, 9, 15]]
@@ -631,5 +653,8 @@ const getEventAttendees = function (events) { };
 // console.log(joinedArraysOf([["a", "b"], ["c"]]));
 // console.log(joinedArraysOf([["a", "b"], ["c", "d"], ["a", "b", "c"]]));
 
-console.log(repeatedStringsOf(["hello", "hello world"]));
-console.log(repeatedStringsOf(["hi", "bye"]));
+// console.log(repeatedStringsOf(["hello", "hello world"]));
+// console.log(repeatedStringsOf(["hi", "bye"]));
+
+// console.log(reversedArraysOf([[1, 2, 3],[4, 5, 6]]));
+
