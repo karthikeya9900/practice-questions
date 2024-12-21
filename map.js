@@ -107,19 +107,35 @@ const getDomainName = function (email) {
   return email.split("@")[1];
 };
 
-// extract domain names from ["user1@gmail.com", "admin@yahoo.com"] => ["gmail.com", "yahoo.com"]
+// extract domain names from ["user1@gmail.com", "admin@yahoo.com"] =>
+//  ["gmail.com", "yahoo.com"]
 const domainNamesOf = function (emails) {
   return emails.map(getDomainName);
 };
 
 // ----------------------------------------------------------------------
 
-// split words in ["hello world", "goodbye moon"] => [["hello", "world"], ["goodbye", "moon"]]
-const splitWordsOf = function (strings) { };
+const splitSentence = function (sentence) {
+  return sentence.split(" ");
+};
+
+// split words in ["hello world", "goodbye moon"] => 
+// [["hello", "world"], ["goodbye", "moon"]]
+const splitWordsOf = function (strings) {
+  return strings.map(splitSentence);
+};
+
 // ----------------------------------------------------------------------
 
+const joinArray = function (list) {
+  return list.join("");
+};
+
 // join arrays of [["a", "b"], ["c", "d"]] => ["ab", "cd"]
-const joinedArraysOf = function (arrayOfArrays) { };
+const joinedArraysOf = function (arrayOfArrays) {
+  return arrayOfArrays.map(joinArray);
+};
+
 // ----------------------------------------------------------------------
 
 // repeat strings in ["hi", "bye"] => ["hihi", "byebye"]
@@ -590,9 +606,19 @@ const getEventAttendees = function (events) { };
 // console.log(negatedBooleansOf([true, false, true]));
 // console.log(negatedBooleansOf([false, true, false]));
 
-console.log(charCodesOf(["a", "b", "c"]));
-console.log(charCodesOf(["A", "B", "C"]));
-console.log(charCodesOf(["*", "$", "@"]));
+// console.log(charCodesOf(["a", "b", "c"]));
+// console.log(charCodesOf(["A", "B", "C"]));
+// console.log(charCodesOf(["*", "$", "@"]));
 
-console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com"]));
-console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com", "kittu@thoughtworks.com"]));
+// console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com"]));
+// console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com", "kittu@thoughtworks.com"]));
+
+console.log(splitWordsOf(["hello"]));
+console.log(splitWordsOf(["hello", "hello world"]));
+console.log(splitWordsOf(["hello world goodbye moon"]));
+console.log(splitWordsOf(["hello world", "goodbye moon"]));
+
+console.log(joinedArraysOf([["a"]]));
+console.log(joinedArraysOf([["a", "b"]]));
+console.log(joinedArraysOf([["a", "b"], ["c"]]));
+console.log(joinedArraysOf([["a", "b"], ["c", "d"], ["a", "b", "c"]]));
