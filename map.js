@@ -1,8 +1,25 @@
+const squareOfNumber = function (number) {
+  return Math.pow(number, 2);
+};
+
 // squares of [1, 2, 3] => [1, 4, 9]
-const squaresOf = function (numbers) { };
+const squaresOf = function (numbers) {
+  return numbers.map(squareOfNumber);
+};
+
+// ----------------------------------------------------------------------
+
+const getLengthOf = function (word) {
+  return word.length;
+};
 
 // lengths of ["apple", "banana", "kiwi"] => [5, 6, 4]
-const lengthsOf = function (strings) { };
+const lengthsOf = function (strings) {
+  return strings.map(getLengthOf)
+};
+
+// ----------------------------------------------------------------------
+
 
 // uppercase of ["hello", "world"] => ["HELLO", "WORLD"]
 const uppercaseOf = function (strings) { };
@@ -373,3 +390,17 @@ const summarizeBookChapters = function (books) { };
 // [{name: "Concert", attendees: [{firstName: "John", lastName: "Doe"}, {firstName: "Jane", lastName: "Smith"}]}, {name: "Conference", attendees: [{firstName: "Bob", lastName: "Brown"}]}]
 // => [{name: "Concert", attendees: ["John Doe", "Jane Smith"]}, {name: "Conference", attendees: ["Bob Brown"]}]
 const getEventAttendees = function (events) { };
+
+//-------------------------------- functions calling --------------------
+
+// console.log(squaresOf([1, 2, 3]));
+// console.log(squaresOf([0, 1, 2]));
+// console.log(squaresOf([0, 1, -2]));
+
+// console.log(lengthsOf(["apple", "banana", "kiwi"]));
+// console.log(lengthsOf(["apple", "", "kiwi"]));
+// console.log(lengthsOf(["apple", "ba", "kiwi"]));
+// console.log(lengthsOf(["applebananakiwi"]));
+// console.log(lengthsOf([]));
+
+
