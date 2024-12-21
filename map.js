@@ -138,12 +138,15 @@ const joinedArraysOf = function (arrayOfArrays) {
 
 // ----------------------------------------------------------------------
 
-// repeat strings in ["hi", "bye"] => ["hihi", "byebye"]
-const repeatedStringsOf = function (strings) { };
-// ----------------------------------------------------------------------
+const getDoubleWords = function (word) {
+  return word.repeat(2);
+};
 
-// count vowels in ["apple", "banana", "grape"] => [2, 3, 2]
-const countVowelsOf = function (strings) { };
+// repeat strings in ["hi", "bye"] => ["hihi", "byebye"]
+const repeatedStringsOf = function (strings) {
+  return strings.map(getDoubleWords);
+};
+
 // ----------------------------------------------------------------------
 
 // reverse arrays of [[1, 2, 3], [4, 5, 6]] => [[3, 2, 1], [6, 5, 4]]
@@ -278,6 +281,11 @@ const normalizeStringLengths = function (strings) { };
 // normalize strings by centering them based on the longest string length in ["cat", "elephant", "dog"] => ["  cat   ", "elephant", "  dog   "]
 // (pad with spaces to justify to the center)
 const centerJustifyStrings = function (strings) { };
+// ----------------------------------------------------------------------
+
+// count vowels in ["apple", "banana", "grape"] => [2, 3, 2]
+const countVowelsOf = function (strings) { };
+
 // ----------------------------------------------------------------------
 
 // scale all numbers proportionally so the largest number becomes 100 in [20, 50, 80] => [25, 62.5, 100]
@@ -613,12 +621,15 @@ const getEventAttendees = function (events) { };
 // console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com"]));
 // console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com", "kittu@thoughtworks.com"]));
 
-console.log(splitWordsOf(["hello"]));
-console.log(splitWordsOf(["hello", "hello world"]));
-console.log(splitWordsOf(["hello world goodbye moon"]));
-console.log(splitWordsOf(["hello world", "goodbye moon"]));
+// console.log(splitWordsOf(["hello"]));
+// console.log(splitWordsOf(["hello", "hello world"]));
+// console.log(splitWordsOf(["hello world goodbye moon"]));
+// console.log(splitWordsOf(["hello world", "goodbye moon"]));
 
-console.log(joinedArraysOf([["a"]]));
-console.log(joinedArraysOf([["a", "b"]]));
-console.log(joinedArraysOf([["a", "b"], ["c"]]));
-console.log(joinedArraysOf([["a", "b"], ["c", "d"], ["a", "b", "c"]]));
+// console.log(joinedArraysOf([["a"]]));
+// console.log(joinedArraysOf([["a", "b"]]));
+// console.log(joinedArraysOf([["a", "b"], ["c"]]));
+// console.log(joinedArraysOf([["a", "b"], ["c", "d"], ["a", "b", "c"]]));
+
+console.log(repeatedStringsOf(["hello", "hello world"]));
+console.log(repeatedStringsOf(["hi", "bye"]));
