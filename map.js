@@ -91,13 +91,27 @@ const negatedBooleansOf = function (booleans) {
 
 // ----------------------------------------------------------------------
 
+const uniqueCodeof = function (char) {
+  return char.charCodeAt();
+};
+
 // character codes of ["a", "b", "c"] => [97, 98, 99]
 // Use the `charCodeAt` method on each string
-const charCodesOf = function (strings) { };
+const charCodesOf = function (strings) {
+  return strings.map(uniqueCodeof);
+};
+
 // ----------------------------------------------------------------------
 
+const getDomainName = function (email) {
+  return email.split("@")[1];
+};
+
 // extract domain names from ["user1@gmail.com", "admin@yahoo.com"] => ["gmail.com", "yahoo.com"]
-const domainNamesOf = function (emails) { };
+const domainNamesOf = function (emails) {
+  return emails.map(getDomainName);
+};
+
 // ----------------------------------------------------------------------
 
 // split words in ["hello world", "goodbye moon"] => [["hello", "world"], ["goodbye", "moon"]]
@@ -568,11 +582,17 @@ const getEventAttendees = function (events) { };
 // console.log(reversedStringsOf(["applebananakiwi"]));
 // console.log(reversedStringsOf(["HELLO"]));
 
-console.log(doubleLettersOf(["cat", "dog", "bat"]));
-console.log(doubleLettersOf(["cat", "dog"]));
-console.log(doubleLettersOf(["karthikeya"]));
+// console.log(doubleLettersOf(["cat", "dog", "bat"]));
+// console.log(doubleLettersOf(["cat", "dog"]));
+// console.log(doubleLettersOf(["karthikeya"]));
 
-console.log(negatedBooleansOf([true, false, true, false, true, false]));
-console.log(negatedBooleansOf([true, false, true]));
-console.log(negatedBooleansOf([false, true, false]));
+// console.log(negatedBooleansOf([true, false, true, false, true, false]));
+// console.log(negatedBooleansOf([true, false, true]));
+// console.log(negatedBooleansOf([false, true, false]));
 
+console.log(charCodesOf(["a", "b", "c"]));
+console.log(charCodesOf(["A", "B", "C"]));
+console.log(charCodesOf(["*", "$", "@"]));
+
+console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com"]));
+console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com", "kittu@thoughtworks.com"]));
