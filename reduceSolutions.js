@@ -69,7 +69,7 @@ const sumPositiveNumbers = function (numbers) {
   return numbers.filter(isPositive).reduce(addNumbers, 0);
 };
 
-console.log(sumPositiveNumbers([1, -2, 3, -4]));
+// console.log(sumPositiveNumbers([1, -2, 3, -4]));
 
 // -------------------------------------------------------------------
 
@@ -82,6 +82,36 @@ const sumOfSquares = function (numbers) {
   return numbers.map(squareOf).reduce(addNumbers, 0);
 };
 
-console.log(sumOfSquares([1, 2, 3, 4]));
+// console.log(sumOfSquares([1, 2, 3, 4]));
+
+// -------------------------------------------------------------------
+
+const isOdd = function (number) {
+  return (number & 1) === 1;
+};
+
+// sumOfOddNumbers([1, 2, 3, 4, 5]) => 9
+const sumOfOddNumbers = function (numbers) {
+  return numbers.filter(isOdd).reduce(addNumbers, 0);
+};
+
+console.log(sumOfOddNumbers([1, 2, 3, 4, 5]));
+
+// -------------------------------------------------------------------
+
+const isNegative = function (number) {
+  return number < 0;
+};
+
+const increment = function (number) {
+  return number + 1;
+};
+
+// countNegativeNumbers([1, -2, 3, -4]) => 2
+const countNegativeNumbers = function (numbers) {
+  return numbers.filter(isNegative).reduce(increment,0);
+};
+
+console.log(countNegativeNumbers([1, -2, 3, -4]));
 
 // -------------------------------------------------------------------

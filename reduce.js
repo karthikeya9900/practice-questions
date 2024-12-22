@@ -19,15 +19,13 @@ const sumPositiveNumbers = function (numbers) { }
 // sumOfSquares([1, 2, 3, 4]) => 30
 const sumOfSquares = function (numbers) { }
 
-// ------------------------------------ done -----------------------------
-
-
-
 // sumOfOddNumbers([1, 2, 3, 4, 5]) => 9
 const sumOfOddNumbers = function (numbers) { }
 
 // countNegativeNumbers([1, -2, 3, -4]) => 2
 const countNegativeNumbers = function (numbers) { }
+
+// ------------------------------------ done -----------------------------
 
 // findSumOfEvenSquares([1, 2, 3, 4]) => 20
 const findSumOfEvenSquares = function (numbers) { }
