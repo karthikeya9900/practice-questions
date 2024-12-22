@@ -21,6 +21,15 @@ const productOf = function (numbers) {
   return numbers.reduce(multiply, 1);
 };
 
-console.log(productOf([1, 2, 3, 4]));
+// console.log(productOf([1, 2, 3, 4]));
+
+// -------------------------------------------------------------------
+
+// averageOf([1, 2, 3, 4, 5]) => 3
+const averageOf = function (numbers) {
+  return numbers.reduce(addNumbers, 0) / numbers.length;
+};
+
+console.log(averageOf([1, 2, 3, 4, 5]));
 
 // -------------------------------------------------------------------
