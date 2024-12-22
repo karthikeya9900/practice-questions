@@ -42,11 +42,31 @@ const isLengthGreaterThan5 = function (word) {
   return word.length > 5;
 };
 
-// words with more than 5 letters ["apple", "banana", "kiwi", "grape"] => ["banana"]
+// words with more than 5 letters ["apple", "banana", "kiwi", "grape"] =>
+//  ["banana"]
 const filterLongWords = function (words) {
   return words.filter(isLengthGreaterThan5);
 };
 
 console.log(filterLongWords(["apple", "banana", "kiwi", "grape"]));
+
+// ----------------------------------------------------------------------
+
+const isGreaterThan = function (threshold, key) {
+  return function (book) {
+    return book[key] > threshold;
+  };
+};
+
+// books with more than 200 pages [{title: "Book 1", pages: 150},
+//  {title: "Book 2", pages: 250}] => [{title: "Book 2", pages: 250}]
+const filterLongBooks = function (books) {
+  const comparator = isGreaterThan(200, "pages");
+  return books.filter(comparator);
+};
+
+console.log(filterLongBooks([{ title: "Book 1", pages: 150 },
+{ title: "Book 2", pages: 250 }, { title: "Book 2", pages: 200 },
+{ title: "Book 2", pages: 201 }]));
 
 // ----------------------------------------------------------------------
