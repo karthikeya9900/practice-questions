@@ -7,14 +7,15 @@ const productOf = function (numbers) { }
 // averageOf([1, 2, 3, 4, 5]) => 3
 const averageOf = function (numbers) { }
 
-// ------------------------------------ done -----------------------------
-
-
 // minOf([3, 1, 4, 1, 5, 9, 2]) => 1
 const minOf = function (numbers) { }
 
 // maxOf([3, 1, 4, 1, 5, 9, 2]) => 9
 const maxOf = function (numbers) { }
+
+// ------------------------------------ done -----------------------------
+
+
 
 // sumPositiveNumbers([1, -2, 3, -4]) => 4
 const sumPositiveNumbers = function (numbers) { }

@@ -30,6 +30,32 @@ const averageOf = function (numbers) {
   return numbers.reduce(addNumbers, 0) / numbers.length;
 };
 
-console.log(averageOf([1, 2, 3, 4, 5]));
+// console.log(averageOf([1, 2, 3, 4, 5]));
+
+// -------------------------------------------------------------------
+
+const findMinOf = function (number1, number2) {
+  return Math.min(number1, number2);
+};
+
+// minOf([3, 1, 4, 1, 5, 9, 2]) => 1
+const minOf = function (numbers) {
+  return numbers.reduce(findMinOf, Infinity);
+};
+
+console.log(minOf([3, 1, 4, 1, 5, 9, 2]));
+
+// -------------------------------------------------------------------
+
+const findMaxOf = function (number1, number2) {
+  return Math.max(number1, number2);
+};
+
+// maxOf([3, 1, 4, 1, 5, 9, 2]) => 9
+const maxOf = function (numbers) {
+  return numbers.reduce(findMaxOf, -Infinity);
+};
+
+console.log(maxOf([3, 1, 4, 1, 5, 9, 2]));
 
 // -------------------------------------------------------------------
