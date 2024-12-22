@@ -48,7 +48,7 @@ const filterLongWords = function (words) {
   return words.filter(isLengthGreaterThan5);
 };
 
-console.log(filterLongWords(["apple", "banana", "kiwi", "grape"]));
+// console.log(filterLongWords(["apple", "banana", "kiwi", "grape"]));
 
 // ----------------------------------------------------------------------
 
@@ -65,8 +65,27 @@ const filterLongBooks = function (books) {
   return books.filter(comparator);
 };
 
-console.log(filterLongBooks([{ title: "Book 1", pages: 150 },
-{ title: "Book 2", pages: 250 }, { title: "Book 2", pages: 200 },
-{ title: "Book 2", pages: 201 }]));
+// console.log(filterLongBooks([{ title: "Book 1", pages: 150 },
+// { title: "Book 2", pages: 250 }, { title: "Book 2", pages: 200 },
+// { title: "Book 2", pages: 201 }]));
+
+// ----------------------------------------------------------------------
+
+const isPropertyValid = function (property, value) {
+  return function (profile) {
+    return profile[property] === value;
+  };
+};
+
+// users with incomplete profiles [{username: "alice", profileComplete: true},
+//  {username: "bob", profileComplete: false}] => 
+// [{username: "bob", profileComplete: false}]
+const filterIncompleteProfiles = function (users) {
+  const comparator = isPropertyValid("profileComplete", false);
+  return users.filter(comparator);
+};
+
+console.log(filterIncompleteProfiles([{ username: "alice", profileComplete: true },
+{ username: "bob", profileComplete: false }, { username: "jack", profileComplete: false }]));
 
 // ----------------------------------------------------------------------

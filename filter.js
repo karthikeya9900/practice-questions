@@ -10,13 +10,13 @@ const filterEvenNumbers = function (numbers) { };
 // words with more than 5 letters ["apple", "banana", "kiwi", "grape"] => ["banana"]
 const filterLongWords = function (words) { };
 
+// books with more than 200 pages [{title: "Book 1", pages: 150}, {title: "Book 2", pages: 250}] => [{title: "Book 2", pages: 250}]
+const filterLongBooks = function (books) { };
+
 // --------------------------- done -------------------------------------
 
 // active users [{username: "alice", active: true}, {username: "bob", active: false}] => [{username: "alice", active: true}]
 // const filterActiveUsers = function (users) { };
-
-// books with more than 200 pages [{title: "Book 1", pages: 150}, {title: "Book 2", pages: 250}] => [{title: "Book 2", pages: 250}]
-const filterLongBooks = function (books) { };
 
 // users with incomplete profiles [{username: "alice", profileComplete: true}, {username: "bob", profileComplete: false}] => [{username: "bob", profileComplete: false}]
 const filterIncompleteProfiles = function (users) { };
