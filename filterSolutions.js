@@ -97,6 +97,19 @@ const filterHighGrades = function (students) {
   return students.filter(comparator);
 };
 
-console.log(filterHighGrades([{ name: "John", grade: 75 }, { name: "Jane", grade: 85 }]));
+// console.log(filterHighGrades([{ name: "John", grade: 75 }, { name: "Jane", grade: 85 }]));
+
+// ----------------------------------------------------------------------
+
+// products that are in stock [{product: "apple", inStock: true}, 
+// {product: "banana", inStock: false}] => [{product: "apple", inStock: true}]
+const filterInStockProducts = function (products) {
+  const comparator = isPropertyValid("inStock", true);
+  return products.filter(comparator);
+};
+
+console.log(filterInStockProducts([{ product: "apple", inStock: true },
+{ product: "banana", inStock: false }]));
+
 
 // ----------------------------------------------------------------------
