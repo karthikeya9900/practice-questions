@@ -1,11 +1,13 @@
+// people older than 30 [{name: "Alice", age: 25}, {name: "Bob", age: 35}] => [{name: "Bob", age: 35}]
+const filterAdults = function (people) { };
+
+// --------------------------- done -------------------------------------
+
 // even numbers [1, 2, 3, 4, 5] => [2, 4]
 const filterEvenNumbers = function (numbers) { };
 
 // words with more than 5 letters ["apple", "banana", "kiwi", "grape"] => ["banana"]
 const filterLongWords = function (words) { };
-
-// people older than 30 [{name: "Alice", age: 25}, {name: "Bob", age: 35}] => [{name: "Bob", age: 35}]
-const filterAdults = function (people) { };
 
 // active users [{username: "alice", active: true}, {username: "bob", active: false}] => [{username: "alice", active: true}]
 // const filterActiveUsers = function (users) { };
