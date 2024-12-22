@@ -108,8 +108,18 @@ const filterInStockProducts = function (products) {
   return products.filter(comparator);
 };
 
-console.log(filterInStockProducts([{ product: "apple", inStock: true },
-{ product: "banana", inStock: false }]));
+// console.log(filterInStockProducts([{ product: "apple", inStock: true },
+// { product: "banana", inStock: false }]));
 
+
+// ----------------------------------------------------------------------
+
+// active users [{username: "alice", active: true}, {username: "bob", active: false}] => [{username: "alice", active: true}]
+const filterActiveUsers = function (users) {
+  const comparator = isPropertyValid("active", true);
+  return users.filter(comparator);
+};
+
+console.log(filterActiveUsers([{ username: "alice", active: true }, { username: "bob", active: false }]));
 
 // ----------------------------------------------------------------------
