@@ -95,7 +95,7 @@ const sumOfOddNumbers = function (numbers) {
   return numbers.filter(isOdd).reduce(addNumbers, 0);
 };
 
-console.log(sumOfOddNumbers([1, 2, 3, 4, 5]));
+// console.log(sumOfOddNumbers([1, 2, 3, 4, 5]));
 
 // -------------------------------------------------------------------
 
@@ -109,9 +109,35 @@ const increment = function (number) {
 
 // countNegativeNumbers([1, -2, 3, -4]) => 2
 const countNegativeNumbers = function (numbers) {
-  return numbers.filter(isNegative).reduce(increment,0);
+  return numbers.filter(isNegative).reduce(increment, 0);
 };
 
-console.log(countNegativeNumbers([1, -2, 3, -4]));
+// console.log(countNegativeNumbers([1, -2, 3, -4]));
+
+// -------------------------------------------------------------------
+
+const isEven = function (number) {
+  return (number & 1) === 0;
+};
+
+// findSumOfEvenSquares([1, 2, 3, 4]) => 20
+const findSumOfEvenSquares = function (numbers) {
+  return numbers.filter(isEven).map(squareOf).reduce(addNumbers, 0);
+};
+
+console.log(findSumOfEvenSquares([1, 2, 3, 4]));
+
+// -------------------------------------------------------------------
+
+const concatElements = function (word1, word2) {
+  return word1 + word2;
+};
+
+// concatenateWords(["hello", "world"]) => "helloworld"
+const concatenateWords = function (words) {
+  return words.reduce(concatElements, "");
+};
+
+console.log(concatenateWords(["hello", "world"]));
 
 // -------------------------------------------------------------------

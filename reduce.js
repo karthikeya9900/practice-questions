@@ -25,13 +25,13 @@ const sumOfOddNumbers = function (numbers) { }
 // countNegativeNumbers([1, -2, 3, -4]) => 2
 const countNegativeNumbers = function (numbers) { }
 
-// ------------------------------------ done -----------------------------
-
 // findSumOfEvenSquares([1, 2, 3, 4]) => 20
 const findSumOfEvenSquares = function (numbers) { }
 
 // concatenateWords(["hello", "world"]) => "helloworld"
 const concatenateWords = function (words) { }
+
+// ------------------------------------ done -----------------------------
 
 // longestWord(["apple", "banana", "cherry", "kiwi"]) => "banana"
 const longestWord = function (words) { }
