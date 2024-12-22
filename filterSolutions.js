@@ -85,7 +85,18 @@ const filterIncompleteProfiles = function (users) {
   return users.filter(comparator);
 };
 
-console.log(filterIncompleteProfiles([{ username: "alice", profileComplete: true },
-{ username: "bob", profileComplete: false }, { username: "jack", profileComplete: false }]));
+// console.log(filterIncompleteProfiles([{ username: "alice", profileComplete: true },
+// { username: "bob", profileComplete: false }, { username: "jack", profileComplete: false }]));
+
+// ----------------------------------------------------------------------
+
+// students with grades above 80 [{name: "John", grade: 75}, 
+// {name: "Jane", grade: 85}] => [{name: "Jane", grade: 85}]
+const filterHighGrades = function (students) {
+  const comparator = isGreaterThan(80, "grade");
+  return students.filter(comparator);
+};
+
+console.log(filterHighGrades([{ name: "John", grade: 75 }, { name: "Jane", grade: 85 }]));
 
 // ----------------------------------------------------------------------
