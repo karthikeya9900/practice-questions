@@ -120,6 +120,40 @@ const filterActiveUsers = function (users) {
   return users.filter(comparator);
 };
 
-console.log(filterActiveUsers([{ username: "alice", active: true }, { username: "bob", active: false }]));
+// console.log(filterActiveUsers([{ username: "alice", active: true }, { username: "bob", active: false }]));
+
+// ----------------------------------------------------------------------
+
+const isOrderedInLast30days = function (key, value) {
+  return function (orderDetails) {
+    return orderDetails[key] > value;
+  };
+};
+
+// orders placed in the last 30 days [{orderDate: "2024-11-01"}, {orderDate: "2024-12-01"}] => [{orderDate: "2024-12-01"}]
+const filterRecentOrders = function (orders) {
+  const comparator = isOrderedInLast30days("orderDate", "2024-11-23");
+  return orders.filter(comparator);
+};
+
+// console.log(filterRecentOrders([{ orderDate: "2024-11-01" }, { orderDate: "2024-12-01" }]));
+
+// ----------------------------------------------------------------------
+
+const isLessThanOrEqual = function (threshold, key) {
+  return function (record) {
+    return record[key] <= threshold;
+  };
+};
+
+// products with a price lower than the average [{name: "item1", price: 10}, {name: "item2", price: 20},
+//  {name: "item3", price: 5}] => [{name: "item1", price: 10}, {name: "item3", price: 5}]
+const filterBelowAveragePrice = function (products) {
+  const comparator = isLessThanOrEqual(10, "price");
+  return products.filter(comparator);
+};
+
+console.log(filterBelowAveragePrice([{ name: "item1", price: 10 },
+{ name: "item2", price: 20 }, { name: "item3", price: 5 }]));
 
 // ----------------------------------------------------------------------
