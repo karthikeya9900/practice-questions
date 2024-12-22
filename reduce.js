@@ -4,6 +4,8 @@ const sumOf = function (numbers) { }
 // productOf([1, 2, 3, 4]) => 24
 const productOf = function (numbers) { }
 
+// ------------------------------------ done -----------------------------
+
 // averageOf([1, 2, 3, 4, 5]) => 3
 const averageOf = function (numbers) { }
 
