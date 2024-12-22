@@ -43,7 +43,7 @@ const minOf = function (numbers) {
   return numbers.reduce(findMinOf, Infinity);
 };
 
-console.log(minOf([3, 1, 4, 1, 5, 9, 2]));
+// console.log(minOf([3, 1, 4, 1, 5, 9, 2]));
 
 // -------------------------------------------------------------------
 
@@ -56,6 +56,32 @@ const maxOf = function (numbers) {
   return numbers.reduce(findMaxOf, -Infinity);
 };
 
-console.log(maxOf([3, 1, 4, 1, 5, 9, 2]));
+// console.log(maxOf([3, 1, 4, 1, 5, 9, 2]));
+
+// -------------------------------------------------------------------
+
+const isPositive = function (number) {
+  return number > 0;
+};
+
+// sumPositiveNumbers([1, -2, 3, -4]) => 4
+const sumPositiveNumbers = function (numbers) {
+  return numbers.filter(isPositive).reduce(addNumbers, 0);
+};
+
+console.log(sumPositiveNumbers([1, -2, 3, -4]));
+
+// -------------------------------------------------------------------
+
+const squareOf = function (number) {
+  return Math.pow(number, 2);
+};
+
+// sumOfSquares([1, 2, 3, 4]) => 30
+const sumOfSquares = function (numbers) {
+  return numbers.map(squareOf).reduce(addNumbers, 0);
+};
+
+console.log(sumOfSquares([1, 2, 3, 4]));
 
 // -------------------------------------------------------------------

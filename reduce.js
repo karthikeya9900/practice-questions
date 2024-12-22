@@ -13,15 +13,15 @@ const minOf = function (numbers) { }
 // maxOf([3, 1, 4, 1, 5, 9, 2]) => 9
 const maxOf = function (numbers) { }
 
-// ------------------------------------ done -----------------------------
-
-
-
 // sumPositiveNumbers([1, -2, 3, -4]) => 4
 const sumPositiveNumbers = function (numbers) { }
 
 // sumOfSquares([1, 2, 3, 4]) => 30
 const sumOfSquares = function (numbers) { }
+
+// ------------------------------------ done -----------------------------
+
+
 
 // sumOfOddNumbers([1, 2, 3, 4, 5]) => 9
 const sumOfOddNumbers = function (numbers) { }
