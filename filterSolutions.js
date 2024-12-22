@@ -11,3 +11,5 @@ const filterAdults = function (people) {
 console.log(filterAdults([{ name: "Alice", age: 25 }, { name: "Bob", age: 35 }]));
 
 // ----------------------------------------------------------------------
+
+
