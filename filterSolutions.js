@@ -146,10 +146,19 @@ const isLessThanOrEqual = function (threshold, key) {
   };
 };
 
+const addPrices = function (value, product) {
+  return product.price + value;
+};
+
+const getAverage = function (products) {
+  return products.reduce(addPrices, 0);
+};
+
 // products with a price lower than the average [{name: "item1", price: 10}, {name: "item2", price: 20},
 //  {name: "item3", price: 5}] => [{name: "item1", price: 10}, {name: "item3", price: 5}]
 const filterBelowAveragePrice = function (products) {
-  const comparator = isLessThanOrEqual(10, "price");
+  const average = getAverage(products) / products.length;
+  const comparator = isLessThanOrEqual(average, "price");
   return products.filter(comparator);
 };
 

@@ -1,4 +1,5 @@
-// people older than 30 [{name: "Alice", age: 25}, {name: "Bob", age: 35}] => [{name: "Bob", age: 35}]
+// people older than 30 [{name: "Alice", age: 25}, {name: "Bob", age: 35}]
+//  => [{name: "Bob", age: 35}]
 const filterAdults = function (people) { };
 
 // numbers greater than 10 [5, 12, 7, 18, 3] => [12, 18]
@@ -10,33 +11,47 @@ const filterEvenNumbers = function (numbers) { };
 // words with more than 5 letters ["apple", "banana", "kiwi", "grape"] => ["banana"]
 const filterLongWords = function (words) { };
 
-// books with more than 200 pages [{title: "Book 1", pages: 150}, {title: "Book 2", pages: 250}] => [{title: "Book 2", pages: 250}]
+// books with more than 200 pages [{title: "Book 1", pages: 150}, 
+// {title: "Book 2", pages: 250}] => [{title: "Book 2", pages: 250}]
 const filterLongBooks = function (books) { };
 
-// users with incomplete profiles [{username: "alice", profileComplete: true}, {username: "bob", profileComplete: false}] => [{username: "bob", profileComplete: false}]
+// users with incomplete profiles [{username: "alice", profileComplete: true}, 
+// {username: "bob", profileComplete: false}] => [{username: "bob", profileComplete: false}]
 const filterIncompleteProfiles = function (users) { };
 
-// students with grades above 80 [{name: "John", grade: 75}, {name: "Jane", grade: 85}] => [{name: "Jane", grade: 85}]
+// students with grades above 80 [{name: "John", grade: 75},
+//  {name: "Jane", grade: 85}] => [{name: "Jane", grade: 85}]
 const filterHighGrades = function (students) { };
 
-// products that are in stock [{product: "apple", inStock: true}, {product: "banana", inStock: false}] => [{product: "apple", inStock: true}]
+// products that are in stock [{product: "apple", inStock: true}, 
+// {product: "banana", inStock: false}] => [{product: "apple", inStock: true}]
 const filterInStockProducts = function (products) { };
 
-// active users [{username: "alice", active: true}, {username: "bob", active: false}] => [{username: "alice", active: true}]
+// active users [{username: "alice", active: true}, 
+// {username: "bob", active: false}] => [{username: "alice", active: true}]
 const filterActiveUsers = function (users) { };
 
-// products with a price lower than the average [{name: "item1", price: 10}, {name: "item2", price: 20}, {name: "item3", price: 5}] => [{name: "item1", price: 10}, {name: "item3", price: 5}]
+// products with a price lower than the average [{name: "item1", price: 10},
+//  {name: "item2", price: 20}, {name: "item3", price: 5}] 
+// => [{name: "item1", price: 10}, {name: "item3", price: 5}]
 const filterBelowAveragePrice = function (products) { };
 
-// orders placed in the last 30 days [{orderDate: "2024-11-01"}, {orderDate: "2024-12-01"}] => [{orderDate: "2024-12-01"}]
+// orders placed in the last 30 days [{orderDate: "2024-11-01"}, 
+// {orderDate: "2024-12-01"}] => [{orderDate: "2024-12-01"}]
 const filterRecentOrders = function (orders) { };
 
 // --------------------------- done -------------------------------------
 
-// active users who posted in the last 7 days [{username: "alice", lastPostDate: "2024-12-01", active: true}, {username: "bob", lastPostDate: "2024-11-20", active: true}] => [{username: "alice", lastPostDate: "2024-12-01", active: true}]
+// active users who posted in the last 7 days [{username: "alice",
+//  lastPostDate: "2024-12-01", active: true}, {username: "bob",
+//  lastPostDate: "2024-11-20", active: true}] => [{username: "alice",
+//  lastPostDate: "2024-12-01", active: true}]
 const filterRecentActiveUsers = function (users) { };
 
-// students who passed all subjects [{name: "John", subjects: [{name: "Math", passed: true}, {name: "Science", passed: true}]}, {name: "Jane", subjects: [{name: "Math", passed: false}, {name: "Science", passed: true}]}] => [{name: "John", subjects: [{name: "Math", passed: true}, {name: "Science", passed: true}]}]
+// students who passed all subjects 
+// [{name: "John", subjects: [{name: "Math", passed: true},{name: "Science", passed: true}]},
+//  {name: "Jane", subjects: [{name: "Math", passed: false},  {name: "Science", passed: true}]}] 
+// => [{name: "John", subjects: [{name: "Math", passed: true}, {name: "Science", passed: true}]}]
 const filterStudentsWithAllSubjectsPassed = function (students) { };
 
 // people whose birthday is this month [{name: "Alice", birthDate: "2024-12-01"}, {name: "Bob", birthDate: "2024-11-01"}] => [{name: "Alice", birthDate: "2024-12-01"}]
