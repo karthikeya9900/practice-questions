@@ -150,19 +150,42 @@ const addPrices = function (value, product) {
   return product.price + value;
 };
 
-const getAverage = function (products) {
-  return products.reduce(addPrices, 0);
+const getAverage = function (products) {  
+  return products.reduce(addPrices, 0) / products.length;
 };
 
 // products with a price lower than the average [{name: "item1", price: 10}, {name: "item2", price: 20},
 //  {name: "item3", price: 5}] => [{name: "item1", price: 10}, {name: "item3", price: 5}]
 const filterBelowAveragePrice = function (products) {
-  const average = getAverage(products) / products.length;
-  const comparator = isLessThanOrEqual(average, "price");
+  const averagePrice = getAverage(products);
+  const comparator = isLessThanOrEqual(averagePrice, "price");
   return products.filter(comparator);
 };
 
-console.log(filterBelowAveragePrice([{ name: "item1", price: 10 },
-{ name: "item2", price: 20 }, { name: "item3", price: 5 }]));
+// console.log(filterBelowAveragePrice([{ name: "item1", price: 10 },
+// { name: "item2", price: 20 }, { name: "item3", price: 5 }]));
 
+// ----------------------------------------------------------------------
+
+const addSalaries = function (salary, employee) {
+  return employee.salary + salary;
+};
+
+const getAverageSalOf = function (employees) {  
+  return employees.reduce(addSalaries, 0) / employees.length;
+};
+
+// employees whose salary is higher than the department average
+//  [{name: "Alice", salary: 5000, department: "HR"}, {name: "Bob", salary: 7000, department: "HR"},
+//  {name: "Charlie", salary: 4000, department: "IT"}] => [{name: "Bob", salary: 7000, department: "HR"}]
+
+const filterHighSalaryEmployees = function (employees) {
+  const averageSalary = getAverageSalOf(employees);
+  const comparator = isGreaterThan(averageSalary, "salary");
+  return employees.filter(comparator);
+};
+
+console.log(filterHighSalaryEmployees([{ name: "Alice", salary: 5000, department: "HR" },
+{ name: "Bob", salary: 7000, department: "HR" },
+{ name: "Charlie", salary: 4000, department: "IT" }]));
 // ----------------------------------------------------------------------
