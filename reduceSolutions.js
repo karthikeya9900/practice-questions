@@ -1,171 +1,118 @@
-const addNumbers = function (num1, num2) {
-  return num1 + num2;
-};
-
 // sumOf([1, 2, 3, 4]) => 10
 
 const sumOf = function (numbers) {
-  return numbers.reduce(addNumbers, 0);
+  return numbers.reduce((num1, num2) => num1 + num2);
 };
 
 // console.log(sumOf([1, 2, 3, 4]));
 
-// -------------------------------------------------------------------
-
-const multiply = function (num1, num2) {
-  return num1 * num2;
-};
+// --------------------------------- 1 --------------------------------
 
 // productOf([1, 2, 3, 4]) => 24
 const productOf = function (numbers) {
-  return numbers.reduce(multiply, 1);
+  return numbers.reduce((num1, num2) => num1 * num2);
 };
 
 // console.log(productOf([1, 2, 3, 4]));
 
-// -------------------------------------------------------------------
+// ---------------------------------- 2 -------------------------------
 
 // averageOf([1, 2, 3, 4, 5]) => 3
 const averageOf = function (numbers) {
-  return numbers.reduce(addNumbers, 0) / numbers.length;
+  return numbers.reduce((num1, num2) => num1 + num2) / numbers.length;
 };
 
 // console.log(averageOf([1, 2, 3, 4, 5]));
 
-// -------------------------------------------------------------------
-
-const findMinOf = function (number1, number2) {
-  return Math.min(number1, number2);
-};
+// ---------------------------- 3 --------------------------------------
 
 // minOf([3, 1, 4, 1, 5, 9, 2]) => 1
 const minOf = function (numbers) {
-  return numbers.reduce(findMinOf, Infinity);
+  return numbers.reduce((num1, num2) => Math.min(num1, num2));
 };
 
 // console.log(minOf([3, 1, 4, 1, 5, 9, 2]));
 
-// -------------------------------------------------------------------
-
-const findMaxOf = function (number1, number2) {
-  return Math.max(number1, number2);
-};
+// ----------------------------- 4 ------------------------------------
 
 // maxOf([3, 1, 4, 1, 5, 9, 2]) => 9
 const maxOf = function (numbers) {
-  return numbers.reduce(findMaxOf, -Infinity);
+  return numbers.reduce((num1, num2) => Math.max(num1, num2));
 };
 
 // console.log(maxOf([3, 1, 4, 1, 5, 9, 2]));
 
-// -------------------------------------------------------------------
-
-const isPositive = function (number) {
-  return number > 0;
-};
+// ------------------------------ 5 -----------------------------------
 
 // sumPositiveNumbers([1, -2, 3, -4]) => 4
 const sumPositiveNumbers = function (numbers) {
-  return numbers.filter(isPositive).reduce(addNumbers, 0);
+  return numbers.filter((num => num > 0)).reduce((num1, num2) => num1 + num2);
 };
 
 // console.log(sumPositiveNumbers([1, -2, 3, -4]));
 
-// -------------------------------------------------------------------
-
-const squareOf = function (number) {
-  return Math.pow(number, 2);
-};
+// ------------------------------ 6 -----------------------------------
 
 // sumOfSquares([1, 2, 3, 4]) => 30
 const sumOfSquares = function (numbers) {
-  return numbers.map(squareOf).reduce(addNumbers, 0);
+  return numbers.map((num) => num * num).reduce((num1, num2) => num1 + num2);
 };
 
 // console.log(sumOfSquares([1, 2, 3, 4]));
 
-// -------------------------------------------------------------------
-
-const isOdd = function (number) {
-  return (number & 1) === 1;
-};
+// -------------------------------- 7 ---------------------------------
 
 // sumOfOddNumbers([1, 2, 3, 4, 5]) => 9
 const sumOfOddNumbers = function (numbers) {
-  return numbers.filter(isOdd).reduce(addNumbers, 0);
+  return numbers.filter((number) => (number & 1) === 1).reduce((num1, num2) => num1 + num2);
 };
 
 // console.log(sumOfOddNumbers([1, 2, 3, 4, 5]));
 
-// -------------------------------------------------------------------
-
-const isNegative = function (number) {
-  return number < 0;
-};
-
-const increment = function (number) {
-  return number + 1;
-};
+// ------------------------------ 8 -----------------------------------
 
 // countNegativeNumbers([1, -2, 3, -4]) => 2
 const countNegativeNumbers = function (numbers) {
-  return numbers.filter(isNegative).reduce(increment, 0);
+  return numbers.reduce((counter, value) => counter + (value < 0 ? 1 : 0), 0);
 };
 
 // console.log(countNegativeNumbers([1, -2, 3, -4]));
 
-// -------------------------------------------------------------------
-
-const isEven = function (number) {
-  return (number & 1) === 0;
-};
+// ------------------------------ 9 ------------------------------------
 
 // findSumOfEvenSquares([1, 2, 3, 4]) => 20
 const findSumOfEvenSquares = function (numbers) {
-  return numbers.filter(isEven).map(squareOf).reduce(addNumbers, 0);
+  return numbers.filter((number) => (number & 1) === 0).map((num) => num * num).
+    reduce((sum, num) => sum + num);
 };
 
 // console.log(findSumOfEvenSquares([1, 2, 3, 4]));
 
-// -------------------------------------------------------------------
-
-const concatElements = function (word1, word2) {
-  return word1 + word2;
-};
+// -------------------------------- 10 ----------------------------------
 
 // concatenateWords(["hello", "world"]) => "helloworld"
 const concatenateWords = function (words) {
-  return words.reduce(concatElements, "");
+  return words.reduce((word1, word2) => word1 + word2);
 };
 
 // console.log(concatenateWords(["hello", "world"]));
 
-// -------------------------------------------------------------------
-
-const longestOf = function (word1, word2) {
-  return word1.length < word2.length ? word1 : word2;
-};
+// --------------------------------- 11 ---------------------------------
 
 // longestWord(["apple", "banana", "cherry", "kiwi"]) => "banana"
 const longestWord = function (words) {
-  return words.reduce(longestOf, "");
+  return words.reduce((word1, word2) => word1.length > word2.length ? word1 : word2);
 };
 
-console.log(longestWord(["apple", "banana", "cherry", "kiwi"]));
+// console.log(longestWord(["apple", "banana", "cherry", "kiwi"]));
 
-
-// -------------------------------------------------------------------
-
-const shortestOf = function (word1, word2) {
-  return word1.length < word2.length ? word1 : word2;
-};
+// ------------------------------ 12 -----------------------------------
 
 // shortestWord(["apple", "banana", "cherry", "kiwi"]) => "kiwi"
 const shortestWord = function (words) {
-  // console.log("hello")
-  return words.reduce(shortestOf,);
+  return words.reduce((word1, word2) => word1.length < word2.length ? word1 : word2);
 };
 
-console.log(shortestWord(["apple", "banana", "cherry", "kiwi"]));
+// console.log(shortestWord(["apple", "banana", "cherry", "kiwi"]));
 
-// -------------------------------------------------------------------
+// ----------------------------- 13 -------------------------------------
