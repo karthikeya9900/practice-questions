@@ -125,7 +125,7 @@ const findSumOfEvenSquares = function (numbers) {
   return numbers.filter(isEven).map(squareOf).reduce(addNumbers, 0);
 };
 
-console.log(findSumOfEvenSquares([1, 2, 3, 4]));
+// console.log(findSumOfEvenSquares([1, 2, 3, 4]));
 
 // -------------------------------------------------------------------
 
@@ -138,6 +138,34 @@ const concatenateWords = function (words) {
   return words.reduce(concatElements, "");
 };
 
-console.log(concatenateWords(["hello", "world"]));
+// console.log(concatenateWords(["hello", "world"]));
+
+// -------------------------------------------------------------------
+
+const longestOf = function (word1, word2) {
+  return word1.length < word2.length ? word1 : word2;
+};
+
+// longestWord(["apple", "banana", "cherry", "kiwi"]) => "banana"
+const longestWord = function (words) {
+  return words.reduce(longestOf, "");
+};
+
+console.log(longestWord(["apple", "banana", "cherry", "kiwi"]));
+
+
+// -------------------------------------------------------------------
+
+const shortestOf = function (word1, word2) {
+  return word1.length < word2.length ? word1 : word2;
+};
+
+// shortestWord(["apple", "banana", "cherry", "kiwi"]) => "kiwi"
+const shortestWord = function (words) {
+  // console.log("hello")
+  return words.reduce(shortestOf,);
+};
+
+console.log(shortestWord(["apple", "banana", "cherry", "kiwi"]));
 
 // -------------------------------------------------------------------

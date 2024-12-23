@@ -31,13 +31,13 @@ const findSumOfEvenSquares = function (numbers) { }
 // concatenateWords(["hello", "world"]) => "helloworld"
 const concatenateWords = function (words) { }
 
-// ------------------------------------ done -----------------------------
-
 // longestWord(["apple", "banana", "cherry", "kiwi"]) => "banana"
 const longestWord = function (words) { }
 
 // shortestWord(["apple", "banana", "cherry", "kiwi"]) => "kiwi"
 const shortestWord = function (words) { }
+
+// ------------------------------------ done -----------------------------
 
 // joinWithComma(["apple", "banana", "cherry"]) => "apple,banana,cherry"
 const joinWithComma = function (words) { }
